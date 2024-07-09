@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "xsql"
+version = "1.0.0"
+description = "data modeling"
+authors = ["saitzaw <saithihazaw43@gmail.com>"]
+license = "GNU"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "~3.9"
+dbt-core = "^1.8.3"
+dbt-postgres = "^1.8.2"
+apache-airflow = "^2.9.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
