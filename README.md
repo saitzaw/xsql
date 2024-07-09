@@ -40,4 +40,6 @@
 
 ## report and Data warehouseing 
 - PostgreSQL
- 
+
+## Programming language 
+- Python 
