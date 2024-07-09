@@ -134,6 +134,20 @@ files = [
 frozenlist = ">=1.1.0"
 
 [[package]]
+name = "airflow-dbt"
+version = "0.4.0"
+description = "Apache Airflow integration for dbt"
+optional = false
+python-versions = "*"
+files = [
+    {file = "airflow_dbt-0.4.0-py2.py3-none-any.whl", hash = "sha256:a662f3bd5db13d35d326b7ce16b5947ad0f7d54b233ba75544898dce06076d36"},
+    {file = "airflow_dbt-0.4.0.tar.gz", hash = "sha256:d077a6d26e0571724f050673becf64a5e4c429c1d0ee3f90611e07e3f4469ec8"},
+]
+
+[package.dependencies]
+apache-airflow = ">=1.10.3"
+
+[[package]]
 name = "alembic"
 version = "1.13.2"
 description = "A database migration tool for SQLAlchemy."
@@ -4237,4 +4251,4 @@ test = ["big-O", "importlib-resources", "jaraco.functools", "jaraco.itertools", 
 [metadata]
 lock-version = "2.0"
 python-versions = "~3.9"
-content-hash = "ca60c584f40777db4eb9c7dd02b74d551c1deaf3296b6cdf6c0a852cd0496cac"
+content-hash = "de04f07d74050276055fb74fd391c6e55d0b687c831c3aa0738cd345c48093f3"
