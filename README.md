@@ -5,8 +5,11 @@
 - Easy to modified report based  on business team  request
 - Save hisotrical data for business user and analystic team
 - Support Data analytical support using Jupyter notebook 
-- Complex queries and analytical queries
 - Data Goverence
+- use open source solution [highly depend on the Apache Software foundation]
+- To get high available (HA)
+- For medium size company, suggest cloud solution
+
 
 # Tools list for xsql
 - modeling 
@@ -33,6 +36,14 @@
 ## Storage 
 - Delta table
 
+## Data pipeline 
+- ETL for archived data and traditional report data
+- ELT for urget and ad-hoc report
+
+## Warehouse 
+- Lakehouse
+- Data mart
+
 ## Database system 
 - MySQL
 - PostgreSQL
@@ -43,3 +54,25 @@
 
 ## Programming language 
 - Python 
+
+# Installation process 
+## Python
+- install pyenv 
+- install poetry 
+
+
+## dbt 
+- poetry add dbt-core dbt-postgres
+
+# airflow 
+- poetry add apache-airflow
+
+# folder strucutre 
+- Perfer DBT run in Carpenter directory 
+- Perfer Airflow run in airflow folder 
+
+## quick installation 
+- git clone <this project url from git>
+- poetry install 
+
+## 
