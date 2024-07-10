@@ -1,0 +1,29 @@
+version: 2
+
+sources:
+  - name: dbt_test
+    schema: covid
+    tables:
+      - name: covid_data
+        identifier: covid_data
+        description: Time Series covid data for Italy and Germany.
+        columns:
+          - name: updated_at
+            description: Last time the record was updated.
+          - name: date
+            description: The actural date of the gathered information.
+          - name: deaths
+            description: Daily number of deaths caused by Covid-19.
+
+      - name: countries
+        identifier: countries
+        description: Countries Data
+        columns:
+          - name: region
+            description: Country Region.
+          - name: sub-region
+            description: Sub-region of the country.
+          - name: intermediate-region
+            description: Intermediate-region of the country.
+          - name: alpha-2
+            description: 2 digit Country code
