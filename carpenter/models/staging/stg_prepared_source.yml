@@ -1,0 +1,22 @@
+version: 3
+
+models:
+  - name: stg_prepared_source
+    description: Aggregated Covid data by Date and Country Name.
+    columns:
+      - name: date
+        description: Date of the record
+      - name: name
+        description: Country Name
+      - name: deaths
+        description: Total deaths recorded
+      - name: confirmed
+        description: Total confirmed cases recorded
+      - name: recovered
+        description: Total cases recovered
+      - name: new_confirmed
+        description: Total new_confirmed cases recorded
+      - name: new_recovered
+        description: Total new_recovered cases recorded
+      - name: new_deaths
+        description: Total new_deaths cases recorded
