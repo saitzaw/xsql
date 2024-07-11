@@ -1,0 +1,13 @@
+[Unit]
+Description=JupyterLab server for data analysis
+
+[Service]
+User=jupyter
+WorkingDirectory=/home/saithihazaw/xsql/woodmill
+ExecStart=/bin/bash -c 'cd /home/saithihazaw/xsql/woodmill && source .xsql/bin/activate && jupyterlab'
+# optional items below
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

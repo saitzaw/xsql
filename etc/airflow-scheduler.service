@@ -1,0 +1,13 @@
+[Unit]
+Description=Airflow scheduler
+
+[Service]
+User=airflowscheduler
+WorkingDirectory=/home/saithihazaw/airflow
+ExecStart=/bin/bash -c 'cd /home/saithihazaw/xsql/woodmill && source .xsql/bin/activate && airflow scheduler -D'
+# optional items below
+Restart=always
+RestartSec=3S
+
+[Install]
+WantedBy=multi-user.target
