@@ -52,11 +52,6 @@ package.nls.*.json
 l10n/
 python-env-tools/**
 
-data_modeling/log
-data_modeling/profile.yml
-data_modeling/seeds
-data_modeling/target
-
 airflow/log
 airflow/
 

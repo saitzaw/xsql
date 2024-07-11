@@ -103,6 +103,10 @@ create-password -> airflow123
 airflow webserver --port 8090 -D
 airflow scheduler -D
 
+# carpenter
+## DBT 
+- change directory to carpenter 
+- cd carpenter 
 ## DBT setup 
 - dbt init 
 - dbt run 
@@ -115,8 +119,22 @@ airflow scheduler -D
 Note: product_codes should save in the dbt_project.yml 
 
 
+## install required model 
+- create a packages.yml same level as dbt_project.yml
+- dbt deps
+
 ## DBT for specific model run 
 - dbt run --models covid_staging.*
+
+## Testing model 
+- dbt test
+
+## Snapshot data [using scd type 2]
+- create a new schema for historical data
+- get data from staging stage
+- dbt snapshot
+
+## Show final result on Superset 
 
 
 
