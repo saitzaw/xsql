@@ -4,7 +4,7 @@ Description=Airflow webserver
 [Service]
 User=airflowwebserver
 WorkingDirectory=/home/saithihazaw/airflow
-ExecStart=/bin/bash -c 'cd /home/saithihazaw/xsql/woodmill && source .xsql/bin/activate && airflow webserver --port 8090 -D'
+ExecStart=/bin/bash -c 'cd /home/saithihazaw/xsql/ && source .xsql/bin/activate && airflow webserver --port 8090 -D'
 # optional items below
 Restart=always
 RestartSec=3
