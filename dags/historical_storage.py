@@ -22,6 +22,6 @@ dag = DAG(
 # Define dbt tasks using BashOperator
 snapshots = BashOperator(
     task_id='dbt_task2',
-    bash_command='$HOME/xsql/dags/includes/snapshots.sh ',
+    bash_command='$HOME/xsql/dags/includes/snapshots/snapshots.sh ',
     dag=dag
 )
