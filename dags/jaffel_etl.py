@@ -4,6 +4,10 @@ from airflow.utils.task_group import TaskGroup
 from airflow.operators.bash_operator import BashOperator
 from datetime import datetime, timedelta
 
+# DEFAULT PATH 
+PROJECT_STG_PATH = '$HOME/xsql/dags/includes/staging'
+PROJECT_MART_PATH = '$HOME/xsql/dags/includes/marts'
+
 # dag arguments 
 default_args = {
     'owner': 'airflow',
@@ -26,32 +30,32 @@ with DAG(
 
         stg_customer_dag = BashOperator(
             task_id='dbt_customer_dag',
-            bash_command='$HOME/xsql/dags/includes/staging/customers.sh '
+            bash_command=f'{PROJECT_STG_PATH}/staging/customers.sh '
         )
 
         stg_location_dag = BashOperator(
             task_id='dbt_location_dag',
-            bash_command='$HOME/xsql/dags/includes/staging/locations.sh '
+            bash_command=f'{PROJECT_STG_PATH}/locations.sh '
         )
 
         stg_order_items_dag = BashOperator(
             task_id='dbt_order_items_dag',
-            bash_command='$HOME/xsql/dags/includes/staging/order_items.sh '
+            bash_command=f'{PROJECT_STG_PATH}/order_items.sh '
         )
 
         stg_order_dag = BashOperator(
             task_id='dbt_orders_dag',
-            bash_command='$HOME/xsql/dags/includes/staging/orders.sh '
+            bash_command=f'{PROJECT_STG_PATH}/orders.sh '
         )
 
         stg_product_dag = BashOperator(
             task_id='dbt_products_dag',
-            bash_command='$HOME/xsql/dags/includes/staging/products.sh '
+            bash_command=f'{PROJECT_STG_PATH}/products.sh '
         )
 
         stg_supplies_dag = BashOperator(
             task_id='dbt_supplies_dag',
-            bash_command='$HOME/xsql/dags/includes/staging/supplies.sh '
+            bash_command=f'{PROJECT_STG_PATH}/supplies.sh '
         )
 
         (
@@ -66,27 +70,27 @@ with DAG(
     with TaskGroup(group_id='marts_jaffel_group') as mjg:
         mart_customer_dag = BashOperator(
                 task_id='marts_customer_dag',
-                bash_command='$HOME/xsql/dags/includes/marts/customers.sh '
+                bash_command=f'{PROJECT_MART_PATH}/customers.sh '
             )
         
         mart_order_items_dag = BashOperator(
                 task_id='marts_order_items_dag',
-                bash_command='$HOME/xsql/dags/includes/marts/order_items.sh '
+                bash_command=f'{PROJECT_MART_PATH}/order_items.sh '
             )
         
         mart_orders_dag = BashOperator(
                 task_id='marts_orders_dag',
-                bash_command='$HOME/xsql/dags/includes/marts/orders.sh '
+                bash_command=f'{PROJECT_MART_PATH}/orders.sh '
             )
         
         mart_products_dag = BashOperator(
                 task_id='marts_products_dag',
-                bash_command='$HOME/xsql/dags/includes/marts/products.sh '
+                bash_command=f'{PROJECT_MART_PATH}/products.sh '
             )
         
         mart_supplies_dag = BashOperator(
                 task_id='marts_supplies_dag',
-                bash_command='$HOME/xsql/dags/includes/marts/supplies.sh '
+                bash_command=f'{PROJECT_MART_PATH}/supplies.sh '
             )
         
         (
