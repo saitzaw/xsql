@@ -8,7 +8,7 @@
 - To improve Data Goverence
 - Use open source solution [highly depend on the Apache Software foundation]
 - To get high available (HA)
-- For medium size company, suggest cloud solution
+- For medium size company, I would suggest cloud solution
 - This repo is not for production 
 
 ## Operation system 
@@ -103,6 +103,12 @@ create-password -> airflow123
 airflow webserver --port 8090 -D
 airflow scheduler -D
 
+## Airflow 
+- run in default path /home/user/airflow
+- create a soft link in dev environment for dags 
+- ln -s $HOME/xsql/dags $HOME/airflow/
+
+
 # carpenter
 ## DBT 
 - change directory to carpenter 
@@ -134,8 +140,11 @@ Note: product_codes should save in the dbt_project.yml
 - get data from staging stage
 - dbt snapshot
 
-## Show final result on Superset 
-
+ ## Apache Superset 
+ - git clone https://github.com/apache/superset
+ - cd superset
+ - docker compose -f docker-compose-image-tag.yml up
+ - Note: use <host.docker.internal> instead  of localhost
 
 
 
