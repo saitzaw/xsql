@@ -8,7 +8,7 @@
         target_table = 'products_snapshot',
         unique_key = 'product_id',
         strategy = 'check',
-        check_cols = ['price', 'product_type']
+        check_cols = ['product_price', 'product_type']
     )
 
 }}
