@@ -13,6 +13,7 @@ dbt-postgres = "^1.8.2"
 apache-airflow = "^2.9.2"
 airflow-dbt = "^0.4.0"
 jupyterlab = "^4.2.3"
+dbt-spark = {extras = ["pyhive"], version = "^1.8.0"}
 
 
 [build-system]
